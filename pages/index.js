@@ -1,8 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import classNames from "classnames";
+import styles from "../styles/Home.module.css";
+import MemberCard from "../components/MemberCard";
+import OpportunityCard from "../components/OpportunityCard";
+import RequestCard from "../components/RequestCard";
+import ItemsCarousel from "react-items-carousel";
 
 export default function Home() {
+  const members = [];
+  const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const chevronWidth = 40;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,58 +22,168 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.slider}>
+            <div className={styles.search_box}>
+              <h1 className="main_title">Get connected to the best Mentors</h1>
+              <h2>
+                Book and meet mentors and mentees from all around sudan for 1:1
+                mentorship in our community
+              </h2>
+              <div className={styles.search}>
+                <div className={styles.search_fields_box}></div>
+                <div className={styles.search_text}></div>
+              </div>
+              <div className={styles.search_learn_more}>
+                <p>Learn more about being a mentor and mentee</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.members_box}>
+            <h1 className="sub_title" style={{ marginLeft: "50px" }}>
+              Welcome to our <b>Recent Members</b>
+            </h1>
+            <div style={{ padding: `0 ${chevronWidth}px`, marginLeft: "10px" }}>
+              <ItemsCarousel
+                requestToChangeActive={setActiveItemIndex}
+                activeItemIndex={activeItemIndex}
+                numberOfCards={6}
+                gutter={20}
+                leftChevron={<button>{"<"}</button>}
+                rightChevron={<button>{">"}</button>}
+                outsideChevron
+                chevronWidth={chevronWidth}
+              >
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+              </ItemsCarousel>
+            </div>
+          </div>
+          <div className={styles.opportunities_box}>
+            <h1 className="sub_title">
+              Recent <b>Mentoring Opportunities</b>
+            </h1>
+            <div className={styles.opportunities}>
+              <OpportunityCard />
+              <OpportunityCard />
+            </div>
+            <h1 className="read_more">Mentoring requests</h1>
+          </div>
+          <div className={styles.invite_box}>
+            <Image
+              style={{ width: "220px" }}
+              src="/invite.jpg"
+              alt="invite friends"
+              className={styles.invite_pic}
+              width={600}
+              height={400}
+            />
+            <div className={styles.email_Box}>
+              <div>
+                <h1 style={{ fontSize: "34px", fontWeight: "500" }}>
+                  Know someone who could be a good mentor ?
+                </h1>
+                <p className="text" style={{ marginTop: "10px" }}>
+                  Invite them to join our community
+                </p>
+                <div className={styles.email_input}>
+                  <p style={{ padding: "10px 60px", color: "#c3c3c3" }}>
+                    Email address
+                  </p>
+                  <button className="button secondary_button">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.requests_box}>
+            <h1 className="sub_title">
+              Recent <b>Mentoring Opportunities</b>
+            </h1>
+            <RequestCard />
+            <RequestCard />
+            <h1 className="read_more">More Requests</h1>
+          </div>
+          <div className={classNames(styles.faq_box, "horizontal")}>
+            <div>
+              <h1 className="sub_title">Having <b>any questions ?</b></h1>
+              <p className="title">Take a look at our FAQ</p>
+            </div>
+            <div className="column">
+              <div className={styles.question}>
+                <h1 className="title">
+                  How much does it cost to book a mentor?
+                </h1>
+                <h1>
+                  Absolutely nothing. isn’t that amazing? we are community on a
+                  mission to democratise mentorship for all, at no cost
+                </h1>
+              </div>
+              <div className={styles.question}>
+                <h1 className="title">
+                  What is a no-show? What is a no show policy ?
+                </h1>
+                <h1>
+                  A no-show is defined as missing you scheduled appointment
+                  without informing the other party, we take a serious
+                  commitmenr towards abuse and behaviour that goes agenst the
+                  trusr and safety of out community. This is why we developed
+                  our no show policy .
+                </h1>
+              </div>
+              <div className={styles.question}>
+                <h1 className="title">
+                  How long is the review process for a mentor application ?
+                </h1>
+                <h1></h1>
+              </div>
+              <div className={styles.question}>
+                <h1 className="title">How do i change my email address?</h1>
+                <h1></h1>
+              </div>
+              <div className={styles.question}>
+                <h1 className="title">How can i become a VIP Mentor?</h1>
+                <h1></h1>
+              </div>
+            </div>
+          </div>
+          <div className={styles.members_box}>
+          <h1 className="sub_title" style={{ marginLeft: "50px" }}>
+              Mentors in your location
+            </h1>
+            <div style={{ padding: `0 ${chevronWidth}px`, marginLeft: "10px" }}>
+              <ItemsCarousel
+                requestToChangeActive={setActiveItemIndex}
+                activeItemIndex={activeItemIndex}
+                numberOfCards={3}
+                gutter={20}
+                leftChevron={<button>{"<"}</button>}
+                rightChevron={<button>{">"}</button>}
+                outsideChevron
+                chevronWidth={chevronWidth}
+              >
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+                <MemberCard />
+              </ItemsCarousel>
+            </div>
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+  
       </footer>
     </div>
-  )
+  );
 }
