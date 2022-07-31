@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Open+Sans&family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: url("/background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
 }
 
 a {
@@ -13,4 +21,115 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.main_title {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-bottom: 20px;
+}
+
+.sub_title {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 3rem;
+  margin: 0 0 40px 0;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.navigation_bar {
+  font-family: "Inter", sans-serif;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.button {
+  cursor: pointer;
+  width: 130px;
+  height: 40px;
+  border-radius: 25px;
+  margin: 0 5px 5px 0;
+  color: white;
+}
+
+.main_button {
+  background-color: #fed049;
+}
+
+.secondary_button {
+  background-color: #007580;
+}
+
+.nav_item {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.member_name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.member_description {
+  width: 260px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pill {
+  height: 40px;
+  width: fit-content;
+  background-color: #007580;
+  margin: 0 5px 5px 0;
+  padding: 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.read_more {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.info_section {
+  margin-top: 70px;
+}
+
+.info {
+  margin: 0 20px 0 0;
+}
+
+.column {
+  width: 50%;
 }
