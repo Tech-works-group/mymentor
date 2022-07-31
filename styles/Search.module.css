@@ -1,0 +1,16 @@
+.oppurtunities_box {
+display: flex;
+flex-direction: row;
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+}
+.oppurtunities{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.opportunity_card {
+    margin: auto 10px;
+}
