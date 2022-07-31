@@ -33,6 +33,10 @@ a {
   align-items: center;
 }
 
+.page_title h1{
+  font-size: 35px;
+}
+
 a,
 input {
   display: block;
