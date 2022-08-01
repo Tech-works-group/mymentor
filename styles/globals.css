@@ -47,6 +47,21 @@ input{
   border-bottom: 0.5px #FED049 solid;
 }
 
+select{
+  border-bottom: 0.5px #FED049 solid;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.signup_info{
+  display:flex;
+  flex-direction: column;
+  align-items: column;
+}
+
 .signup_form{
   display: flex;
   flex-direction: row;
