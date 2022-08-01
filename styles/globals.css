@@ -40,11 +40,29 @@ a {
 a,
 input {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 
 input{
   border-bottom: 0.5px #FED049 solid;
+}
+
+.signup_form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkbox, .terms_link{
+  display: inline;
+}
+
+
+.terms{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .small_text{
@@ -62,7 +80,14 @@ a:hover{
 }
 
 .form_box {
-  margin: ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password_confirmation{
+  margin: auto 10px;
 }
 
 .logo {
