@@ -7,6 +7,10 @@ import MemberCard from "../components/MemberCard";
 import OpportunityCard from "../components/OpportunityCard";
 import RequestCard from "../components/RequestCard";
 import ItemsCarousel from "react-items-carousel";
+import Select from "../components/Select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const members = [];
@@ -31,8 +35,17 @@ export default function Home() {
                 mentorship in our community
               </h2>
               <div className={styles.search}>
-                <div className={styles.search_fields_box}></div>
-                <div className={styles.search_text}></div>
+                <div className={styles.search_fields_box}>
+                  <Select/>
+                </div>
+                <div className={styles.search_text}>
+                  <div className={styles.search_icon}>
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      style={{ fontSize: 15, color: "#ffffff" }}
+                    />
+                  </div>
+                </div>
               </div>
               <div className={styles.search_learn_more}>
                 <p>Learn more about being a mentor and mentee</p>
@@ -111,7 +124,9 @@ export default function Home() {
           </div>
           <div className={classNames(styles.faq_box, "horizontal")}>
             <div>
-              <h1 className="sub_title">Having <b>any questions ?</b></h1>
+              <h1 className="sub_title">
+                Having <b>any questions ?</b>
+              </h1>
               <p className="title">Take a look at our FAQ</p>
             </div>
             <div className="column">
@@ -153,14 +168,14 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.members_box}>
-          <h1 className="sub_title" style={{ marginLeft: "50px" }}>
+            <h1 className="sub_title" style={{ marginLeft: "50px" }}>
               Mentors in your location
             </h1>
             <div style={{ padding: `0 ${chevronWidth}px`, marginLeft: "10px" }}>
               <ItemsCarousel
                 requestToChangeActive={setActiveItemIndex}
                 activeItemIndex={activeItemIndex}
-                numberOfCards={3}
+                numberOfCards={4}
                 gutter={20}
                 leftChevron={<button>{"<"}</button>}
                 rightChevron={<button>{">"}</button>}
@@ -180,10 +195,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-  
-      </footer>
     </div>
   );
 }
