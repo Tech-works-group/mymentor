@@ -59,10 +59,10 @@ const Navigation = (props) => {
         <Link href="/about">
           <button className="nav_item">Become a mentor</button>
         </Link>
-        <Link href="/membership/packages">
+        <Link href="/login">
           <button className="secondary_button button">Login</button>
         </Link>
-        <Link href="/">
+        <Link href="/signup">
           <button className="main_button button">Join Us</button>
         </Link>
       </div>
