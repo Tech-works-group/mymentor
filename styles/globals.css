@@ -26,14 +26,27 @@ a {
 .container {
   width: 100%;
   height: 100vh;
-  padding: 170px;
+  padding: 120px 50px;
   display: flex;
   line-height: 40px;
   flex-direction: column;
   align-items: center;
 }
 
-.page_title h1{
+.columns_container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.columns_container :first-child {
+  width: 20%;
+}
+
+.columns_container :nth-child(2) {
+  width: 80%;
+}
+.page_title h1 {
   font-size: 35px;
 }
 
@@ -43,55 +56,55 @@ input {
   /* width: 100%; */
 }
 
-input{
-  border-bottom: 0.5px #FED049 solid;
+input {
+  border-bottom: 0.5px #fed049 solid;
 }
 
-select{
-  border-bottom: 0.5px #FED049 solid;
+select {
+  border-bottom: 0.5px #fed049 solid;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.signup_info{
-  display:flex;
+.signup_info {
+  display: flex;
   flex-direction: column;
   align-items: column;
 }
 
-.signup_form{
+.signup_form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.checkbox, .terms_link{
+.checkbox,
+.terms_link {
   display: inline;
 }
 
-
-.terms{
+.terms {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.small_text{
+.small_text {
   font-size: 12px;
-color: #007580;
+  color: #007580;
 }
 
-.signup_link{
+.signup_link {
   display: inline;
   color: #007580;
 }
 
-a:hover{
-  color: #FED049;
+a:hover {
+  color: #fed049;
 }
 
 .form_box {
@@ -101,7 +114,7 @@ a:hover{
   align-items: center;
 }
 
-.password_confirmation{
+.password_confirmation {
   margin: auto 10px;
 }
 
@@ -149,8 +162,8 @@ a:hover{
   color: white;
 }
 
-.vertical_margin{
-margin: 20px 60px;
+.vertical_margin {
+  margin: 20px 60px;
 }
 
 .main_button {
@@ -270,7 +283,7 @@ margin: 20px 60px;
   margin: 0 40px;
 }
 
-.footer_top_section :first-child{
+.footer_top_section :first-child {
   font-weight: 600;
 }
 
