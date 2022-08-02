@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -59,10 +59,10 @@ const Navigation = (props) => {
         <Link href="/about">
           <button className="nav_item">Become a mentor</button>
         </Link>
-        <Link href="/login">
+        <Link href="/auth/login">
           <button className="secondary_button button">Login</button>
         </Link>
-        <Link href="/signup">
+        <Link href="/auth/signup">
           <button className="main_button button">Join Us</button>
         </Link>
       </div>
