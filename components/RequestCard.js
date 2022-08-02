@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Request = () => {
   return (
     <div className={styles.request_card}>
       <div className={styles.request_section}>
         <div>
-        <h1 className="title">Front end development</h1>
-        <p>
-          <b>Khadija</b> is looking for a mentor
-        </p>
+          <h1 className="title">Front end development</h1>
+          <p>
+            <b>Khadija</b> is looking for a mentor
+          </p>
         </div>
         <p>
           i’m a recent computer science graduate from khartoum university,
@@ -47,8 +48,12 @@ const Request = () => {
       </div>
       <div>
         <div className="horizontal">
-          <button className="button main_button">Requiest</button>
-          <button className="button main_button">View</button>
+          <Link href="/">
+            <button className="button main_button">Requiest</button>
+          </Link>
+          <Link href="/request">
+            <button className="button main_button">View</button>
+          </Link>
         </div>
       </div>
     </div>
