@@ -36,7 +36,7 @@ export default function Home() {
               </h2>
               <div className={styles.search}>
                 <div className={styles.search_fields_box}>
-                  <Select/>
+                  <Select />
                 </div>
                 <div className={styles.search_text}>
                   <div className={styles.search_icon}>
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
           <div className={styles.requests_box}>
             <h1 className="sub_title">
-              Recent <b>Mentoring Opportunities</b>
+              Recent <b>Mentoring Requests</b>
             </h1>
             <RequestCard />
             <RequestCard />

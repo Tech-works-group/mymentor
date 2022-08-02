@@ -1,19 +1,22 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const OpportunityCard = () => {
   return (
     <div className={styles.opportunity_card}>
       <div className={styles.opportunity_header}>
         <div>
-          <h1 className="title">
-            Here is the opportunity title
-          </h1>
+          <h1 className="title">Here is the opportunity title</h1>
           <p>Get mentored by</p>
         </div>
         <div className="vertical">
-          <button className="button main_button">Requiest</button>
-          <button className="button main_button">View</button>
+          <Link href="/opportunity/opportunityForm">
+            <button className="button main_button">Requiest</button>
+          </Link>
+          <Link href="/opportunity">
+            <button className="button main_button">View</button>
+          </Link>
         </div>
       </div>
       <div className="horizontal">
