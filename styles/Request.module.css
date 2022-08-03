@@ -1,84 +1,93 @@
 .title {
-    font-size: 24px;
-    font-weight: 600;
-
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .sub_title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #007580;
+  font-size: 14px;
+  font-weight: 600;
+  color: #007580;
 }
 
 .description {
-    width: 70%;
-    line-height: 1.5rem;
-    margin: 40px 0;
+  width: 70%;
+  line-height: 1.5rem;
+  margin: 40px 0;
 }
 
 .content_item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .icon_box {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 40px;
 }
 
 .content_section {
-    margin: 20px 0
+  margin: 20px 0;
 }
 
 .content_section ol {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .about_box {
-    height: fit-content;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 15px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
+  height: fit-content;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .about_main_section {
-    height: fit-content;
-    width: "70%";
-    display: "flex";
-    flex-direction: "column";
+  height: fit-content;
+  width: "70%";
+  display: "flex";
+  flex-direction: "column";
 }
 
 .about_section {
-    height: "100%";
-    background-color: "green";
-    line-height: "1.5rem";
-    padding: 25px;
+  height: "100%";
+  background-color: "green";
+  line-height: "1.5rem";
+  padding: 25px;
 }
 
 .about_section div {
-    line-height: 1.5rem;
-    margin-bottom: 10px;
+  line-height: 1.5rem;
+  margin-bottom: 10px;
 }
 
-
 .about_section p {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .image_section {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mini_title {
-    font-weight: 600;
-    color: #007580;
+  font-weight: 600;
+  color: #007580;
+}
+
+.form_item {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-right: 24px;
+}
+
+.column_form_item {
+    flex-direction: column !important;
 }

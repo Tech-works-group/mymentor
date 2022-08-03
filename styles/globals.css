@@ -85,6 +85,7 @@ ol {
   justify-content: baseline;
   align-items: baseline;
   height: fit-content;
+  line-height: 40px;
 }
 
 .columns_container .small {
@@ -96,7 +97,8 @@ ol {
   width: 80%;
   background-color: #f8f8f8;
   border-radius: 25px;
-  opacity: 0.8;
+  opacity: 0.9;
+  padding: 1em;
 }
 
 .content {
@@ -205,13 +207,41 @@ input {
   border-bottom: 0.5px #fed049 solid;
 }
 
+input[type=text]{
+background-color: #ffffff;
+}
+
+input[type=radio] {
+  margin-right: 3em;
+}
+
 select {
   border-bottom: 0.5px #fed049 solid;
 }
 
+.flex{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.flex div {
+  display: flex;
+  flex-direction: row;
+}
+
+label{
+  margin: auto;
+}
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.column_select{
+  display:flex;
+  flex-direction: column;
 }
 
 .right {
