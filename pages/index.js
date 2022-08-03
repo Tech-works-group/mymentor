@@ -7,7 +7,8 @@ import MemberCard from "../components/MemberCard";
 import OpportunityCard from "../components/OpportunityCard";
 import RequestCard from "../components/RequestCard";
 import ItemsCarousel from "react-items-carousel";
-import Select from "../components/Select";
+import SelectInput from "../components/SelectInput";
+import TextInput from "../components/TextInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
@@ -36,9 +37,14 @@ export default function Home() {
               </h2>
               <div className={styles.search}>
                 <div className={styles.search_fields_box}>
-                  <Select />
+                  <SelectInput />
                 </div>
                 <div className={styles.search_text}>
+                  <TextInput
+                    type="text"
+                    placeholder="what you need help with"
+                    style={{ borderBottom: "none" }}
+                  />
                   <div className={styles.search_icon}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}

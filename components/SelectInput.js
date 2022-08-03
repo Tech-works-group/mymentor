@@ -1,6 +1,6 @@
 import React from "react";
 
-const Select = () => {
+const SelectInput = () => {
   return (
     <div>
       <select name="" id="" style={{ border: "none" }}>
@@ -13,4 +13,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default SelectInput;

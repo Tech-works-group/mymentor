@@ -3,7 +3,9 @@ import Link from "next/link";
 import styles from "../../styles/Request.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Comment from "../../components/Comment";
 import classNames from "classnames";
+import TextInput from "../../components/TextInput";
 
 import {
   faPlusSquare,
@@ -28,7 +30,7 @@ const index = () => {
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
         <div className="add_new">
-          <Link href="">New opportunity</Link>
+          <Link href="/opportunity/opportunityForm">New opportunity</Link>
           <FontAwesomeIcon icon={faPlusSquare} className="icon" />
         </div>
       </div>
@@ -211,52 +213,15 @@ const index = () => {
         </div>
         <div className="comments_section">
           <div className="comments">
-            <div className="comment">
-              <div className="comment_image">
-                <Image
-                  style={{ width: "220px" }}
-                  src="/avatar_man.jpg"
-                  alt="my mentor Logo"
-                  className="image"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div>
-                <h3>Mohamed Salih</h3>
-                <p>
-                  dolor in reprehenderit in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                  non proident, sunt in culpa qui officia deserunt mollit anim
-                  id est laborum
-                </p>
-                <h3 style={{ justifySelf: "right" }}>Reply</h3>
-              </div>
-            </div>
-            <div className="comment reply">
-              <div className="comment_image">
-                <Image
-                  style={{ width: "220px" }}
-                  src="/avatar_man.jpg"
-                  alt="my mentor Logo"
-                  className="image"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div>
-                <h3>Mohamed Salih</h3>
-                <p>
-                  dolor in reprehenderit in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                  non proident, sunt in culpa qui officia deserunt mollit anim
-                  id est laborum
-                </p>
-              </div>
-            </div>
+            <Comment />
+            <Comment type="reply" />
           </div>
           <div className="comment_input">
-            <p>Write your comment here</p>
+            <TextInput
+              type="text"
+              placeholder="Write your comment here"
+              style={{ borderBottom: "none" }}
+            />
           </div>
           <div className="right">
             <button className="button secondary_button">Comment</button>

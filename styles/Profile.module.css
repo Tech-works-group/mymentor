@@ -1,0 +1,26 @@
+.chat_box {
+    height: fit-content;
+    background-color: #f8f8f8;
+    width: 30%;
+    padding: 0 25px;
+    margin: 20px;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    border-radius: 25px;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #86BDC3;
+    margin-top: 25px;
+}
+
+.search div {
+    display: flex;
+    align-items: center;
+}

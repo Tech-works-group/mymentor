@@ -148,9 +148,10 @@
   border-radius: 25px 0 0 25px;
 }
 
-.search_fields_box select{
+.search_fields_box select {
   font-size: 14px;
 }
+
 .search_text {
   width: 60%;
   border-radius: 0 25px 25px 0;
