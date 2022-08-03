@@ -31,18 +31,18 @@ const requestForm = () => {
         </div>
       </div>
       <div className="wide">
-        <h3>Mentoring oppurtunity title</h3>
+        <h3>Mentoring request title</h3>
         <input type="text" placeholder="example"></input>
-        <h3>Oppurtunity Description</h3>
+        <h3>Request Description</h3>
         <input type="text" placeholder="example"></input>
 
         <div className="flex">
           <div>
           <div className={styles.form_item}>
-          <h3>Certificate</h3>
+          <h3>Location</h3>
           <select>
-            <option selected>Awarded</option>
-            <option>Not Awarded</option>
+            <option selected>Remote</option>
+            <option>On site</option>
             </select>
           </div>
           <div className={styles.form_item}>
@@ -55,17 +55,13 @@ const requestForm = () => {
           </div>
           <div>
           <div className={styles.form_item}>
-          <h3>Location</h3>
+          <h3>Experience</h3>
           <select>
-            <option>Remote</option>
+            <option selected>None</option>
             <option>On site</option>
             </select>
             </div>
             <br></br>
-            <div>
-          <label for="might_get_hired">Might get hired</label>
-              <input type="radio" value="might_get_hired"></input>
-              </div>
           </div>
           <div style={{}}>
           <div className={styles.form_item}>
@@ -85,11 +81,11 @@ const requestForm = () => {
             </select>
             </div>
             </div>
-        <h3>Responsiblities</h3>
+        <h3>I'm looking for help with</h3>
         <input type="text" placeholder="example"></input>
         <h3>Requirements</h3>
         <input type="text" placeholder="example"></input>
-        <h3>Expected Outcome</h3>
+        <h3>I have a background about</h3>
         <input type="text" placeholder="example"></input>
       </div>
       </div>

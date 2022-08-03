@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { interpolateAs } from 'next/dist/shared/lib/router/router';
 
-const requestForm = () => {
+const opportunityForm = () => {
   const name = "Khadiga Saif";
   const title = "Front End development";
   const paid = 20;
@@ -97,4 +97,4 @@ const requestForm = () => {
   );
 }
 
-export default requestForm;
+export default opportunityForm;
