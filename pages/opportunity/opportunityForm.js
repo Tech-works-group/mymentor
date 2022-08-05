@@ -22,7 +22,7 @@ const opportunityForm = () => {
   return (
     <div className="container columns_container">
       <div className="small">
-        <Link href="">My Mentoring Opportunity</Link>
+        <Link href="">My Mentoring Opportunities</Link>
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
         <div className="add_new">
@@ -35,7 +35,7 @@ const opportunityForm = () => {
           <h1>New Mentoring Opportunity</h1>
         </div>
         <h3 className={styles.question} style={{ marginTop: "25px" }}>
-          Mentoring oppurtunity title
+          Mentoring Opportunity title
         </h3>
         <div className={styles.form_row}>
           <input
