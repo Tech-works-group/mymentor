@@ -4,13 +4,7 @@ import styles from "../../styles/Request.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import classNames from "classnames";
-import {
-  faPlusSquare,
-  faDollarSign,
-  faBriefcase,
-  faLocation,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import { interpolateAs } from "next/dist/shared/lib/router/router";
 
 const opportunityForm = () => {
@@ -26,7 +20,7 @@ const opportunityForm = () => {
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
         <div className="add_new">
-          <Link href="">Post a new oppurtunity</Link>
+          <Link href="">Post a new opportunity</Link>
           <FontAwesomeIcon icon={faPlusSquare} className="icon" />
         </div>
       </div>
@@ -44,7 +38,7 @@ const opportunityForm = () => {
             placeholder="example"
           ></input>
         </div>
-        <h3 className={styles.question}>Oppurtunity Description</h3>
+        <h3 className={styles.question}>opportunity Description</h3>
         <div className={styles.form_row}>
           <input
             className={styles.form_input}
@@ -108,7 +102,7 @@ const opportunityForm = () => {
             </div>
           </div>
           <div>
-            <h3>Responsiblities</h3>
+            <h3>Responsibilities</h3>
           </div>
           <div className={styles.form_row}>
             <input
