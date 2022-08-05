@@ -98,7 +98,7 @@ ol {
   background-color: #f8f8f8;
   border-radius: 25px;
   opacity: 0.9;
-  padding: 1em;
+  padding: 0 25px 25px 25px;
 }
 
 .content {
@@ -207,10 +207,6 @@ input {
   border-bottom: 0.5px #fed049 solid;
 }
 
-input[type=text]{
-background-color: #ffffff;
-}
-
 input[type=radio] {
   margin-right: 3em;
 }
@@ -219,11 +215,11 @@ select {
   border-bottom: 0.5px #fed049 solid;
 }
 
-.flex{
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-justify-content: space-around;
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .flex div {
@@ -231,16 +227,17 @@ justify-content: space-around;
   flex-direction: row;
 }
 
-label{
+label {
   margin: auto;
 }
+
 .row {
   display: flex;
   flex-direction: row;
 }
 
-.column_select{
-  display:flex;
+.column_select {
+  display: flex;
   flex-direction: column;
 }
 

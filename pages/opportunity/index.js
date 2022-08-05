@@ -224,7 +224,12 @@ const index = () => {
             />
           </div>
           <div className="right">
-            <button className="button secondary_button">Comment</button>
+            <button
+              style={{ marginTop: "25px" }}
+              className="button secondary_button"
+            >
+              Comment
+            </button>
           </div>
         </div>
       </div>
