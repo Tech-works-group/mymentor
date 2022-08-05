@@ -76,12 +76,7 @@
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -205,8 +200,8 @@
 }
 
 .opportunity_card {
-  width: 49%;
-  height: 300px;
+  margin-right: 25px;
+  margin-bottom: 25px;
   background-color: #d8ebe4;
   opacity: 0.8;
   border-radius: 15px;

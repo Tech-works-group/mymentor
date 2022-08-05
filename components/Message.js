@@ -6,16 +6,17 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const Message = () => {
   return (
     <div className="message_body">
-      <Image
-        style={{ width: "220px" }}
-        src="/avatar_man.jpg"
-        alt="avatar man"
-        className="image"
-        width={60}
-        height={60}
-      />
       <div>
-        <h1>Balqees Hamdi</h1>
+        <Image
+          src="/avatar_man.jpg"
+          alt="avatar man"
+          className="image"
+          width={60}
+          height={60}
+        />
+      </div>
+      <div>
+        <h1>Mostafa Yasen</h1>
         <p>hello can you help me with ..</p>
       </div>
       <FontAwesomeIcon

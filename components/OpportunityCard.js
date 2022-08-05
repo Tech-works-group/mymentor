@@ -2,9 +2,13 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-const OpportunityCard = () => {
+const OpportunityCard = ({ source }) => {
+  console.log(source);
   return (
-    <div className={styles.opportunity_card}>
+    <div
+      className={styles.opportunity_card}
+      style={(source = "profile" ? { width: "90%" } : { width: "49%" })}
+    >
       <div className={styles.opportunity_header}>
         <div>
           <h1 className="title">Here is the opportunity title</h1>
@@ -25,7 +29,7 @@ const OpportunityCard = () => {
       </div>
       <p className="text">
         looking for someone who’s intrested in project managment related tasks
-        and who’s eagre to gain knowledge and have fun during the experience !
+        and who’s eagre to gain knowledge and have fun during the experience
       </p>
     </div>
   );

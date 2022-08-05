@@ -73,14 +73,14 @@ export default function Home() {
                 outsideChevron
                 chevronWidth={chevronWidth}
               >
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
               </ItemsCarousel>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <div className={styles.invite_box}>
             <Image
-              style={{ width: "220px" }}
+              style={{ width: "250px" }}
               src="/invite.jpg"
               alt="invite friends"
               className={styles.invite_pic}
@@ -188,14 +188,11 @@ export default function Home() {
                 outsideChevron
                 chevronWidth={chevronWidth}
               >
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
               </ItemsCarousel>
             </div>
           </div>

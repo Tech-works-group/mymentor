@@ -24,7 +24,7 @@ const opportunityForm = () => {
           <FontAwesomeIcon icon={faPlusSquare} className="icon" />
         </div>
       </div>
-      <div className="wide">
+      <div className="wide" style={{ padding: "0 25px 25px 25px" }}>
         <div className="tag">
           <h1>New Mentoring Opportunity</h1>
         </div>
