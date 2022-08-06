@@ -306,6 +306,7 @@ a:hover {
 .logo {
   width: 50px;
   height: auto;
+  cursor: pointer;
 }
 
 .main_title {

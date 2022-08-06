@@ -10,14 +10,14 @@ import ItemsCarousel from "react-items-carousel";
 import SelectInput from "../components/SelectInput";
 import TextInput from "../components/TextInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 
 export default function Home() {
   const members = [];
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
-
+  const [show, setShow] = useState("questionOne");
   return (
     <div className={styles.container}>
       <Head>
@@ -136,40 +136,95 @@ export default function Home() {
               <p className="title">Take a look at our FAQ</p>
             </div>
             <div className="column">
-              <div className={styles.question}>
+              <div
+                className={styles.question}
+                onClick={() =>
+                  setShow(show == "questionOne" ? "" : "questionOne")
+                }
+              >
                 <h1 className="title">
                   How much does it cost to book a mentor?
                 </h1>
-                <h1>
-                  Absolutely nothing. isn’t that amazing? we are community on a
-                  mission to democratise mentorship for all, at no cost
-                </h1>
+                {show == "questionOne" && (
+                  <div>
+                    <h1>
+                      Absolutely nothing. isn’t that amazing? we are community
+                      on a mission to democratise mentorship for all, at no cost
+                    </h1>
+                  </div>
+                )}
               </div>
-              <div className={styles.question}>
+              <div
+                className={styles.question}
+                onClick={() =>
+                  setShow(show == "questionTwo" ? "" : "questionTwo")
+                }
+              >
                 <h1 className="title">
                   What is a no-show? What is a no show policy ?
                 </h1>
-                <h1>
-                  A no-show is defined as missing you scheduled appointment
-                  without informing the other party, we take a serious
-                  commitmenr towards abuse and behaviour that goes agenst the
-                  trusr and safety of out community. This is why we developed
-                  our no show policy .
-                </h1>
+                {show == "questionTwo" && (
+                  <div>
+                    <h1>
+                      A no-show is defined as missing you scheduled appointment
+                      without informing the other party, we take a serious
+                      commitment towards abuse and behaviour that goes agenst
+                      the trusr and safety of out community. This is why we
+                      developed our no show policy .
+                    </h1>
+                  </div>
+                )}
               </div>
-              <div className={styles.question}>
+              <div
+                className={styles.question}
+                onClick={() =>
+                  setShow(show == "questionThree" ? "" : "questionThree")
+                }
+              >
                 <h1 className="title">
                   How long is the review process for a mentor application ?
                 </h1>
-                <h1></h1>
+                {show == "questionThree" && (
+                  <div>
+                    <h1>
+                      It depends on the mentor you requested to be mentored by,
+                      but usually it doesn't take more than three days
+                    </h1>
+                  </div>
+                )}
               </div>
-              <div className={styles.question}>
+              <div
+                className={styles.question}
+                onClick={() =>
+                  setShow(show == "questionFour" ? "" : "questionFour")
+                }
+              >
                 <h1 className="title">How do i change my email address?</h1>
-                <h1></h1>
+                {show == "questionFour" && (
+                  <div>
+                    <h1>
+                      By clicking on profile settings and editing your profile
+                      information
+                    </h1>
+                  </div>
+                )}
               </div>
-              <div className={styles.question}>
+              <div
+                className={styles.question}
+                onClick={() =>
+                  setShow(show == "questionFive" ? "" : "questionFive")
+                }
+              >
                 <h1 className="title">How can i become a VIP Mentor?</h1>
-                <h1></h1>
+                {show == "questionFive" && (
+                  <div>
+                    <h1>
+                      Vip Mentors are selected carefully by our committee based
+                      on feedback given from previous Mentees and on our own
+                      research and data
+                    </h1>
+                  </div>
+                )}
               </div>
             </div>
           </div>
