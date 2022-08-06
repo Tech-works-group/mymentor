@@ -211,6 +211,13 @@ input[type=radio] {
   margin-right: 3em;
 }
 
+.input_field {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: solid #c3c3c3 0.5px;
+  padding: 5px 10px;
+}
+
 select {
   border-bottom: 0.5px #fed049 solid;
 }

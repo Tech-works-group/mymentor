@@ -22,7 +22,7 @@ function index() {
   return (
     <div className="container columns_container">
       <div className="small">
-        <Link href="">My requests</Link>
+        <Link href="/request/myRequests">My requests</Link>
         <Link href="">Edit Profile</Link>
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
@@ -34,7 +34,9 @@ function index() {
       <div className="wide" style={{ backgroundColor: "transparent" }}>
         <div className={styles.profile}>
           <div>
-            <button className="button main_button">Edit Profile</button>
+            <Link href="profile/profileForm">
+              <button className="button main_button">Edit Profile</button>
+            </Link>
           </div>
           <div className={styles.personal_info}>
             <div>

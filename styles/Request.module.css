@@ -104,3 +104,23 @@
   width: 100%;
   margin: 15px 0;
 }
+
+.request_box {
+  margin-bottom: 20px;
+}
+
+.request_box,
+.applicant_info_box {
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 25px;
+  margin: 10px 0;
+  display: flex;
+  background-color: #EAF4F5;
+  line-height: 1.5rem;
+  justify-content: space-between;
+}
+
+.applicant_info {
+  margin-left: 25px;
+}
