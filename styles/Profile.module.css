@@ -1,0 +1,129 @@
+.chat_box {
+    height: fit-content;
+    background-color: #f8f8f8;
+    width: 30%;
+    padding: 0 25px;
+    margin: 20px;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    border-radius: 25px;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #86BDC3;
+    margin-top: 25px;
+}
+
+.search div {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    height: 300px;
+    background-image: url("/colored_background.jpg");
+    background-size: cover;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.personal_info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+.personal_info div {
+    display: flex;
+    flex-direction: row;
+    margin-right: -22px;
+}
+
+.personal_info h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.personal_info p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: #282846;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.personal_info_tab {
+    background-color: #f8f8f8;
+    padding: 25px;
+    line-height: 1.5rem;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.mini_section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mini_section h1,
+.personal_info_tab h3 {
+    font-weight: 500;
+    font-size: 17px;
+    color: #007580;
+}
+
+.input_field {
+    border: solid 0.5 #ffffff;
+    height: fit-content;
+    width: fit-content;
+}
+
+.form_item {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.question {
+    margin-right: 10px;
+}
+
+.form_input {
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    padding: 0 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.form_row {
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+}

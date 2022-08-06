@@ -76,12 +76,7 @@
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -148,9 +143,10 @@
   border-radius: 25px 0 0 25px;
 }
 
-.search_fields_box select{
+.search_fields_box select {
   font-size: 14px;
 }
+
 .search_text {
   width: 60%;
   border-radius: 0 25px 25px 0;
@@ -204,8 +200,8 @@
 }
 
 .opportunity_card {
-  width: 49%;
-  height: 300px;
+  margin-right: 25px;
+  margin-bottom: 25px;
   background-color: #d8ebe4;
   opacity: 0.8;
   border-radius: 15px;

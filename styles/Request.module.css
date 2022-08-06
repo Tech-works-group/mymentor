@@ -1,0 +1,126 @@
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sub_title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #007580;
+}
+
+.description {
+  width: 70%;
+  line-height: 1.5rem;
+  margin: 40px 0;
+}
+
+.content_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon_box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 40px;
+}
+
+.content_section {
+  margin: 20px 0;
+}
+
+.content_section ol {
+  margin: 0 10px;
+}
+
+.about_box {
+  height: fit-content;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.about_main_section {
+  height: fit-content;
+  width: "70%";
+  display: "flex";
+  flex-direction: "column";
+}
+
+.about_section {
+  height: "100%";
+  background-color: "green";
+  line-height: "1.5rem";
+  padding: 25px;
+}
+
+.about_section div {
+  line-height: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about_section p {
+  line-height: 1.5rem;
+}
+
+.image_section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mini_title {
+  font-weight: 600;
+  color: #007580;
+}
+
+.form_item {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.question {
+  margin-right: 10px;
+}
+
+.form_input {
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  padding: 0 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.form_row {
+  display: flex;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.request_box {
+  margin-bottom: 20px;
+}
+
+.request_box,
+.applicant_info_box {
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 25px;
+  margin: 10px 0;
+  display: flex;
+  background-color: #EAF4F5;
+  line-height: 1.5rem;
+  justify-content: space-between;
+}
+
+.applicant_info {
+  margin-left: 25px;
+}

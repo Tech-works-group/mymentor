@@ -7,7 +7,8 @@ import MemberCard from "../components/MemberCard";
 import OpportunityCard from "../components/OpportunityCard";
 import RequestCard from "../components/RequestCard";
 import ItemsCarousel from "react-items-carousel";
-import Select from "../components/Select";
+import SelectInput from "../components/SelectInput";
+import TextInput from "../components/TextInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
@@ -36,9 +37,14 @@ export default function Home() {
               </h2>
               <div className={styles.search}>
                 <div className={styles.search_fields_box}>
-                  <Select/>
+                  <SelectInput />
                 </div>
                 <div className={styles.search_text}>
+                  <TextInput
+                    type="text"
+                    placeholder="what you need help with"
+                    style={{ borderBottom: "none" }}
+                  />
                   <div className={styles.search_icon}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
@@ -67,14 +73,14 @@ export default function Home() {
                 outsideChevron
                 chevronWidth={chevronWidth}
               >
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
+                <MemberCard width={200} height={200} />
               </ItemsCarousel>
             </div>
           </div>
@@ -90,7 +96,7 @@ export default function Home() {
           </div>
           <div className={styles.invite_box}>
             <Image
-              style={{ width: "220px" }}
+              style={{ width: "250px" }}
               src="/invite.jpg"
               alt="invite friends"
               className={styles.invite_pic}
@@ -116,7 +122,7 @@ export default function Home() {
           </div>
           <div className={styles.requests_box}>
             <h1 className="sub_title">
-              Recent <b>Mentoring Opportunities</b>
+              Recent <b>Mentoring Requests</b>
             </h1>
             <RequestCard />
             <RequestCard />
@@ -182,14 +188,11 @@ export default function Home() {
                 outsideChevron
                 chevronWidth={chevronWidth}
               >
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
+                <MemberCard width={250} height={250} />
               </ItemsCarousel>
             </div>
           </div>
