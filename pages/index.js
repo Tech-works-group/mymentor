@@ -13,7 +13,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Home({ data, done }) {
+  console.log("data", data);
+  console.log("done", done);
+
   const members = [];
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
@@ -255,4 +258,16 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch("http://localhost:8000/api");
+  const data = await response.json();
+
+  return {
+    props: {
+      data: data,
+      done: true,
+    },
+  };
 }

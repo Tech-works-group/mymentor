@@ -41,7 +41,6 @@ const Navigation = (props) => {
       }}
     >
       <div>
-        <Link href="/">
           <Image
             style={{ width: "220px" }}
             src="/logo.png"
@@ -50,7 +49,6 @@ const Navigation = (props) => {
             width={180}
             height={40}
           />
-        </Link>
       </div>
       <div>
         <Link href="/">
