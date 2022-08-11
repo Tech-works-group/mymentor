@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import classNames from "classnames";
@@ -12,15 +12,16 @@ import TextInput from "../components/TextInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
+import AuthenticationContext from "../context/AuthenticationContext";
 
-export default function Home({ data, done }) {
-  console.log("data", data);
-  console.log("done", done);
-
-  const members = [];
+export default function Home({ done }) {
+    const members = [];
+  const [userInfo,setUserInfo]=useState({})
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const [show, setShow] = useState("questionOne");
+  const { user, accessToken } = useContext(AuthenticationContext);
+
   return (
     <div className={styles.container}>
       <Head>
