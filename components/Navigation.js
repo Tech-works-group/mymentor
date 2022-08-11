@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import AuthenticationContext from "../context/AuthenticationContext";
 
 const Navigation = (props) => {
   const [clientWindowHeight, setClientWindowHeight] = useState("");
@@ -10,6 +11,7 @@ const Navigation = (props) => {
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
 
+  const { user } = useContext(AuthenticationContext);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -41,16 +43,14 @@ const Navigation = (props) => {
       }}
     >
       <div>
-        <Link href="/">
-          <Image
-            style={{ width: "220px" }}
-            src="/logo.png"
-            alt="my mentor Logo"
-            className="logo"
-            width={180}
-            height={40}
-          />
-        </Link>
+        <Image
+          style={{ width: "220px" }}
+          src="/logo.png"
+          alt="my mentor Logo"
+          className="logo"
+          width={180}
+          height={40}
+        />
       </div>
       <div>
         <Link href="/">
@@ -59,12 +59,23 @@ const Navigation = (props) => {
         <Link href="/about">
           <button className="nav_item">Become a mentor</button>
         </Link>
-        <Link href="/auth/login">
-          <button className="secondary_button button">Login</button>
-        </Link>
-        <Link href="/auth/signup">
-          <button className="main_button button">Join Us</button>
-        </Link>
+
+        {user ? (
+          <>
+            <Link href="/auth/signup">
+              <button className="main_button button">Logout</button>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href="/auth/login">
+              <button className="secondary_button button">Login</button>
+            </Link>
+            <Link href="/auth/signup">
+              <button className="main_button button">Join Us</button>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
