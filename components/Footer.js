@@ -24,18 +24,18 @@ const Footer = () => {
               and hands-on experience in different fields
             </p>
             <div className="socials">
-            <FontAwesomeIcon
-              icon={faFacebook}
-              style={{ fontSize: 40, color: "#" }}
-            />
-            <FontAwesomeIcon
-              icon={faInstagram}
-              style={{ fontSize: 40, color: "#" }}
-            />
-            <FontAwesomeIcon
-              icon={faTwitter}
-              style={{ fontSize: 40, color: "#" }}
-            />
+              <FontAwesomeIcon
+                icon={faFacebook}
+                style={{ fontSize: 40, color: "#" }}
+              />
+              <FontAwesomeIcon
+                icon={faInstagram}
+                style={{ fontSize: 40, color: "#" }}
+              />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ fontSize: 40, color: "#" }}
+              />
             </div>
             <div>
               <i className="fas fa-check"></i>
@@ -57,7 +57,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="copyrights">
-          <p>© 2022 Dribbble. All rights reserved.</p>
+          <p>© 2022 Techworks group 2.</p>
+          <p>All rights reserved.</p>
         </div>
       </div>
     </>

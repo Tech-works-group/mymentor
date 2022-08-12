@@ -106,14 +106,14 @@ ol {
 }
 
 .comments_section {
-  background-color: #EAF4F1;
+  background-color: #eaf4f1;
   width: 100%;
   padding: 45px 25px;
   border-radius: 15px;
 }
 
 .comments {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   border-radius: 25px;
   padding: 25px;
   margin: 25px;
@@ -207,7 +207,7 @@ input {
   border-bottom: 0.5px #fed049 solid;
 }
 
-input[type=radio] {
+input[type="radio"] {
   margin-right: 3em;
 }
 
@@ -488,8 +488,116 @@ a:hover {
   border-top: solid #d8ebe4;
 }
 
-@media only screen and (min-width: 300px) {
-/* .container {
-  padding: 0;
-} */
+.mobile_nav {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 50px;
+  }
+
+  .mobile_nav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: #ffffff;
+    justify-content: space-between;
+  }
+
+  .dropdown_menu {
+    height: fit-content;
+    color: #007580;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dropdown_menu div {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    border-bottom: 0.5px solid #fed049;
+  }
+
+  .navigation_bar {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    height: fit-content;
+    padding: 20px;
+  }
+
+  .footer_top,
+  .footer_links,
+  .footer_top div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer_top_section {
+    margin: 0;
+  }
+
+  .copyrights {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .socials {
+    width: 50%;
+  }
+
+  .footer,
+  .footer_top,
+  .footer_links,
+  .footer_top_section,
+  .footer_top div {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .main_title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .sub_title {
+    font-size: 14px;
+    margin: 10px !important;
+  }
+
+  .button {
+    width: 60px;
+    height: 20px;
+    font-size: 8px;
+  }
+
+  .pill {
+    font-size: 8px;
+    padding: 10px;
+    height: 0;
+  }
+
+  .title {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .text {
+    font-size: 8px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
 }
