@@ -13,13 +13,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import AuthenticationContext from "../context/AuthenticationContext";
+import AuthenticationContext from "../context/AuthenticationContext";
 
 export default function Home({ done }) {
-    const members = [];
+  const members = [];
   const [userInfo,setUserInfo]=useState({})
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const [show, setShow] = useState("questionOne");
+  const { user, accessToken } = useContext(AuthenticationContext);
+
   const { user, accessToken } = useContext(AuthenticationContext);
 
   return (

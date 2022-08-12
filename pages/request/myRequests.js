@@ -23,7 +23,7 @@ function myRequests() {
     <div className="container columns_container">
       <div className="small">
         <Link href="/request/myRequests">My requests</Link>
-        <Link href="">Edit Profile</Link>
+        <Link href="profile/profileForm">Edit Profile</Link>
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
         <div className="add_new">
