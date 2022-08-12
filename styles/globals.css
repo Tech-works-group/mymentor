@@ -487,3 +487,9 @@ a:hover {
   align-items: center;
   border-top: solid #d8ebe4;
 }
+
+@media only screen and (min-width: 300px) {
+/* .container {
+  padding: 0;
+} */
+}

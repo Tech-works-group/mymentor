@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 const OpportunityCard = ({ source }) => {
+  const [show, setShow] = useState(false)
+  show?alert("sure you'd like to send this request?"):""
   console.log(source);
   return (
     <div
@@ -15,9 +17,7 @@ const OpportunityCard = ({ source }) => {
           <p>Get mentored by</p>
         </div>
         <div className="vertical">
-          <Link href="/opportunity/opportunityForm">
-            <button className="button main_button">Requiest</button>
-          </Link>
+          <button onClick={()=>{setShow(true)}} className="button main_button">Requiest</button>
           <Link href="/opportunity">
             <button className="button main_button">View</button>
           </Link>

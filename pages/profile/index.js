@@ -23,7 +23,7 @@ function index() {
     <div className="container columns_container">
       <div className="small">
         <Link href="/request/myRequests">My requests</Link>
-        <Link href="">Edit Profile</Link>
+        <Link href="profile/profileForm">Edit Profile</Link>
         <Link href="">Settings</Link>
         <Link href="">Terms and Privacy</Link>
         <div className="add_new">
@@ -56,7 +56,7 @@ function index() {
                 }}
               />
             </div>
-            <h1>Mona Aman</h1>
+            <h1>Balqees Hamdi</h1>
             <h3>Software Developer</h3>
             <p>Mentor</p>
           </div>
@@ -82,7 +82,7 @@ function index() {
             <div className={styles.section}>
               <div className={styles.mini_section}>
                 <h1>Name</h1>
-                <p>Mona Mamon Aman</p>
+                <p>Balqees Hamdi</p>
               </div>
               <div className={styles.mini_section}>
                 <h1>Phone Number</h1>
@@ -96,7 +96,7 @@ function index() {
               </div>
               <div className={styles.mini_section}>
                 <h1>Email</h1>
-                <p>MonaAman@gmail.com</p>
+                <p>Balqees@gmail.com</p>
               </div>
             </div>
             <div className={styles.section}>

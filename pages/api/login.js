@@ -1,3 +1,5 @@
+import { StrictMode } from "react";
+
  const login = async (req, res) => {
   let accessToken = null;
 
@@ -22,9 +24,11 @@
         body,
         config
       );
-      console.log(accessResponse)
+    //   console.log(accessResponse)
+        accessToken = accessResponse.access
+        res.setHeader('set-cookie',cookie.serialize('refresh',accessResponse.refresh,{httpOnly:true, secure:false,sameSite:"Strict", maxAge:60*60*24,path:"/"}))
     } catch (err) {
-        console.log('error' ,err)
+        console.log('ERROR' ,err)
     }
   } else {
     res.setHeader("Allow", ["POST"]);
