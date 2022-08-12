@@ -1,4 +1,5 @@
-import React, { useState,useContext }  from "react";
+import React, { useState,useContext } , { useState,useContext }  from "react";
+import AuthenticationContext from "../../context/AuthenticationContext";
 import AuthenticationContext from "../../context/AuthenticationContext";
 
 const Signup = () => {
@@ -29,7 +30,7 @@ const Signup = () => {
   
   return (
     <div className="container">
-      <form className="form_box" onSubmit={submitHandler}>
+      <form className="form_box" onSubmit={submitHandler} onSubmit={submitHandler}>
         <div className="page_title left">
           <h1>Create a new account</h1>
           <p>Basic account information</p>
@@ -109,7 +110,10 @@ const Signup = () => {
 
         <button
           type="submit"
+         
+          type="submit"
           className="vertical_margin button secondary_button"
+        
         >
           Sign Up
         </button>

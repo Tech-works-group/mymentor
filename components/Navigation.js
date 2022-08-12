@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect,useContext,useContext } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,6 +14,7 @@ const Navigation = (props) => {
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
 
+  const { user } = useContext(AuthenticationContext);
   const { user } = useContext(AuthenticationContext);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -54,6 +55,8 @@ const Navigation = (props) => {
           width={180}
           height={40}
         />
+<<<<<<< HEAD
+=======
       </div>
       {user ? (
         <div style={{ display: "flex", flexDirection: "row" }}>
