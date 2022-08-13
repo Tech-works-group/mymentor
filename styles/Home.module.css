@@ -405,5 +405,8 @@
     width: 100%;
   }
 
+  .about_main_section {
+    flex-direction: column !important;
+  }
 
 }

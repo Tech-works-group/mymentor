@@ -493,8 +493,29 @@ a:hover {
 }
 
 @media (max-width: 400px) {
-  .container {
-    padding: 50px;
+
+  .container,
+  .columns_container .wide .content {
+    padding: 20px;
+  }
+
+  .columns_container {
+    flex-direction: column !important;
+  }
+
+  .columns_container .wide .content {
+    padding-top: 40px;
+  }
+
+  .columns_container .small,
+  .columns_container .wide {
+    width: 100%;
+  }
+
+  .tag {
+    width: fit-content;
+    right: 20px;
+    padding: 10px;
   }
 
   .mobile_nav {
@@ -600,4 +621,34 @@ a:hover {
     width: 100%;
   }
 
+  .comments {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .comments_section {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .comment_input {
+    padding: 10;
+    margin: 10px;
+  }
+
+  .right .button {
+    margin-top: 0 !important;
+  }
+
+  .right {
+    padding: 10px;
+  }
 }
