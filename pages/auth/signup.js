@@ -1,6 +1,5 @@
 import React, { useState,useContext } , { useState,useContext }  from "react";
 import AuthenticationContext from "../../context/AuthenticationContext";
-import AuthenticationContext from "../../context/AuthenticationContext";
 
 const Signup = () => {
   const [firstName, setFirstName] = useState("");

@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import classNames from "classnames";
@@ -13,16 +13,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import AuthenticationContext from "../context/AuthenticationContext";
-import AuthenticationContext from "../context/AuthenticationContext";
 
 export default function Home({ done }) {
   const members = [];
-  const [userInfo,setUserInfo]=useState({})
+  const [userInfo, setUserInfo] = useState({});
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
-  const [show, setShow] = useState("questionOne");
-  const { user, accessToken } = useContext(AuthenticationContext);
 
+  const [show, setShow] = useState("questionOne");
   const { user, accessToken } = useContext(AuthenticationContext);
 
   return (
@@ -89,6 +87,16 @@ export default function Home({ done }) {
                 <MemberCard width={200} height={200} />
                 <MemberCard width={200} height={200} />
               </ItemsCarousel>
+            </div>
+          </div>
+          <div className={styles.members_box_mobile}>
+            <h1 className="sub_title" style={{ marginLeft: "50px" }}>
+              Our <b>Top Rated Mentors</b>
+            </h1>
+            <div>
+              <MemberCard width={150} height={150} />
+              <MemberCard width={150} height={150} />
+              <MemberCard width={150} height={150} />
             </div>
           </div>
           <div className={styles.opportunities_box}>
