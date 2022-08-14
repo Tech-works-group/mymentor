@@ -24,11 +24,11 @@ const opportunityForm = () => {
           <FontAwesomeIcon icon={faPlusSquare} className="icon" />
         </div>
       </div>
-      <div className="wide" style={{ padding: "0 25px 25px 25px" }}>
+      <div className="wide mobile_form">
         <div className="tag">
           <h1>New Mentoring Opportunity</h1>
         </div>
-        <h3 className={styles.question} style={{ marginTop: "25px" }}>
+        <h3 className={classNames(styles.question, styles.formMargin)}>
           Mentoring Opportunity title
         </h3>
         <div className={styles.form_row}>
@@ -71,12 +71,8 @@ const opportunityForm = () => {
                 <option>On site</option>
               </select>
             </div>
-            <div>
-              <label for="might_get_hired">Might get hired</label>
-              <input type="radio" value="might_get_hired"></input>
-            </div>
           </div>
-          <div className={styles.form_row}>
+          <div className={styles.mobile_radio_buttons}>
             <div className={styles.form_item}>
               <label for="paid">paid</label>
               <input
@@ -85,6 +81,12 @@ const opportunityForm = () => {
                 value="paid"
               ></input>
             </div>
+            <div>
+              <label for="might_get_hired">Might get hired</label>
+              <input type="radio" value="might_get_hired"></input>
+            </div>
+          </div>
+          <div className={styles.form_row}>
             <div>
               <h3 className={styles.question}>Amount</h3>
               <input
@@ -101,6 +103,7 @@ const opportunityForm = () => {
               </select>
             </div>
           </div>
+
           <div>
             <h3>Responsibilities</h3>
           </div>

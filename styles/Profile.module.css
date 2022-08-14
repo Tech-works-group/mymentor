@@ -127,3 +127,18 @@
     width: 100%;
     margin: 15px 0;
 }
+
+@media (max-width: 1000px) {
+
+    .section,
+    .tabs,
+    .form_row {
+        flex-direction: column;
+    }
+
+    .chat_box {
+        width: 100%;
+    }
+
+
+}

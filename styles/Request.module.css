@@ -125,7 +125,12 @@
   margin-left: 25px;
 }
 
-@media (max-width: 400px) {
+.formMargin {
+  margin-top: 25px;
+}
+
+
+@media (max-width: 1000px) {
 
   .about_main_section div,
   .about_box {
@@ -134,5 +139,18 @@
 
   .about_section {
     width: 100%;
+  }
+
+  .formMargin {
+    margin-top: 40px;
+  }
+
+  .mobile_radio_buttons,
+  .mobile_radio_buttons div {
+    flex-direction: row !important;
+  }
+
+  .applicant_info {
+    margin-left: 0;
   }
 }

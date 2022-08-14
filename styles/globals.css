@@ -99,6 +99,7 @@ ol {
   background-color: #f8f8f8;
   border-radius: 25px;
   opacity: 0.9;
+  padding: 0 25px;
 }
 
 .content {
@@ -492,7 +493,11 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 400px) {
+.mobile_form {
+  padding: "0 25px 25px 25px"
+}
+
+@media (max-width: 1000px) {
 
   .container,
   .columns_container .wide .content {
@@ -650,5 +655,13 @@ a:hover {
 
   .right {
     padding: 10px;
+  }
+
+  .mobile_form {
+    margin-top: 40px;
+  }
+
+  .flex div {
+    flex-direction: column;
   }
 }
