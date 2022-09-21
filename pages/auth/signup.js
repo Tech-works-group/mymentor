@@ -1,35 +1,39 @@
-import React, { useState,useContext } , { useState,useContext }  from "react";
+import React, { useState, useContext } from "react";
 import AuthenticationContext from "../../context/AuthenticationContext";
 
 const Signup = () => {
   const [firstName, setFirstName] = useState("");
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [date, setDate] = useState(new Date())
+  const [email, setEmail] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [date, setDate] = useState(new Date());
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [mentor,setMentor] = useState(false)
-  const [mentee, setMentee] = useState(false)
-    const {signup} = useContext(AuthenticationContext)
+  const [mentor, setMentor] = useState(false);
+  const [mentee, setMentee] = useState(false);
+  const { signup } = useContext(AuthenticationContext);
   const submitHandler = async (e) => {
     e.preventDefault();
-     await signup({
-       firstName,
-       email,
-       lastName,
-       date,
-       password,
-       passwordConfirmation,
-       mentor,
-       mentee,
-       username,
-     });
+    await signup({
+      firstName,
+      email,
+      lastName,
+      date,
+      password,
+      passwordConfirmation,
+      mentor,
+      mentee,
+      username,
+    });
   };
-  
+
   return (
     <div className="container">
-      <form className="form_box" onSubmit={submitHandler} onSubmit={submitHandler}>
+      <form
+        className="form_box"
+        onSubmit={submitHandler}
+        onSubmit={submitHandler}
+      >
         <div className="page_title left">
           <h1>Create a new account</h1>
           <p>Basic account information</p>
@@ -109,10 +113,8 @@ const Signup = () => {
 
         <button
           type="submit"
-         
           type="submit"
           className="vertical_margin button secondary_button"
-        
         >
           Sign Up
         </button>

@@ -13,15 +13,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faChev } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import AuthenticationContext from "../context/AuthenticationContext";
+import { getRecentMentoringRequests } from "./api/getRecentMentoringRequests";
 
 export default function Home({ done }) {
   const members = [];
   const [userInfo, setUserInfo] = useState({});
+  const [requests, setRequests] = useState([]);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
 
   const [show, setShow] = useState("questionOne");
   const { user, accessToken } = useContext(AuthenticationContext);
+
+  useEffect(() => {
+    // declare the data fetching function
+    const fetchData = async () => {
+      const data = await getRecentMentoringRequests();
+      if (data) {
+        setRequests(data);
+      }
+    };
+    // call the function
+    fetchData()
+      // make sure to catch any error
+      .catch(console.error);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -139,8 +155,9 @@ export default function Home({ done }) {
             <h1 className="sub_title">
               Recent <b>Mentoring Requests</b>
             </h1>
-            <RequestCard />
-            <RequestCard />
+            {requests.map((request) => (
+              <RequestCard request={request} />
+            ))}
             <h1 className="read_more">More Requests</h1>
           </div>
           <div className={classNames(styles.faq_box, "horizontal")}>

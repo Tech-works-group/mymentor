@@ -21,7 +21,7 @@ const Login = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     await login({ email, password });
-  };
+    
   return (
     <div className="container">
       <h1 className="sub_title">Login</h1>

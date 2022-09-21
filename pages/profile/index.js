@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Profile.module.css";
@@ -15,10 +15,11 @@ import TextInput from "../../components/TextInput";
 import Message from "../../components/Message";
 import OpportunityCard from "../../components/OpportunityCard";
 import MemberCard from "../../components/MemberCard";
+import AuthenticationContext from "../../context/AuthenticationContext";
 
 function index() {
+  const { user } = useContext(AuthenticationContext);
   const [selected, setIsSelected] = useState("personalInfo");
-  console.log(selected);
   return (
     <div className="container columns_container">
       <div className="small">

@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-const Request = () => {
+const Request = ({ request }) => {
+  console.log(request);
   return (
     <div className={styles.request_card}>
       <div className={styles.request_section}>
@@ -14,8 +15,8 @@ const Request = () => {
         </div>
         <p>
           i’m a recent computer science graduate from khartoum university,
-          intrested in front end development and UI / UX  looking for a mentor
-          to guide me through becoming a proficional front end developer
+          intrested in front end development and UI / UX looking for a mentor to
+          guide me through becoming a proficional front end developer
         </p>
         <div className="horizontal">
           <div>
