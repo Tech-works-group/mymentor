@@ -309,14 +309,3 @@ export default function Home({ done }) {
   );
 }
 
-export async function getStaticProps() {
-  const response = await fetch("http://localhost:8000/api");
-  const data = await response.json();
-
-  return {
-    props: {
-      data: data,
-      done: true,
-    },
-  };
-}

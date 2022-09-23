@@ -26,6 +26,32 @@ const requestForm = () => {
   const [startingFrom, setStartingFrom] = useState("");
   const [endingAt, setEndingAt] = useState("");
   const [designation, setDesignation] = useState("");
+// {
+//     "title":"posts 1",
+//     "description": "description 1",
+//     "isPaid": true,
+//     "amount": {
+//         "price":200,
+//         "currency":"usd"
+//     },
+//     "location": "remote",
+//     "address": "Sudan",
+//     "duration": {
+//         "durationType":"closed",
+//         "duration":2,
+//         "unit":"week"
+//     },
+//     "experience": {
+//          "duration":2,
+//         "unit":"month"
+//     }, 
+//     "requirements": ["1","2"], 
+//     "tasks": ["1","2"],
+//     "background":["1","2"],
+//     "startingFrom": "2022-08-12T21:52:24.540Z", 
+//     "endingAt": "2022-08-12T21:52:24.540Z"
+// }
+
 
   const handleChange = (e) => {
     let updatedValue = {};
@@ -136,7 +162,7 @@ const requestForm = () => {
           </div>
           <div className={styles.form_row}>
             <div className={styles.form_item}>
-              <label for="paid">paid</label>
+              <label >paid</label>
               <input
                 className={styles.form_input}
                 type="radio"

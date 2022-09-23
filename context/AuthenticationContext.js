@@ -1,15 +1,23 @@
 import { createContext, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const AuthenticationContext = createContext();
 
-export const AuthenticationProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export const AuthenticationProvider = ({ children ,currentUser}) => {
+  const [user, setUser] = useState(currentUser);
   const [error, setError] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      return
+    }
+    setUser(currentUser)
+   },[currentUser])
 
   const login = async ({ email, password }) => {
     const config = {
