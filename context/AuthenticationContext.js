@@ -6,16 +6,12 @@ const AuthenticationContext = createContext();
 
 export const AuthenticationProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [accessToken, setAccessToken] = useState(null);
-  const [refreshToken, setRefreshToken] = useState(null);
   const [error, setError] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
 
   const router = useRouter();
 
   const login = async ({ email, password }) => {
-    let accessToken = null;
-
     const config = {
       headers: {
         Accept: "application/json",
@@ -32,13 +28,12 @@ export const AuthenticationProvider = ({ children }) => {
       const { data } = await axios.post(
         "http://localhost:8000/v1/auth/login",
         body,
-        config
+        { ...config, withCredentials: true }
       );
       console.log(data);
       if (data) {
         setUser(data.user);
-        setAccessToken(data?.tokens?.access?.token);
-        setRefreshToken(data?.tokens?.refresh?.token);
+
         router.push("/");
       }
     } catch (err) {
@@ -51,14 +46,12 @@ export const AuthenticationProvider = ({ children }) => {
   };
 
   const signup = async ({
-    firstName,
+    name,
     email,
-    lastName,
     date,
     password,
     passwordConfirmation,
-    mentor,
-    mentee,
+    userType,
     username,
   }) => {
     const config = {
@@ -77,23 +70,21 @@ export const AuthenticationProvider = ({ children }) => {
       email,
       username,
       password,
-      first_name: firstName,
-      last_name: lastName,
-      is_mentor: mentor,
-      is_mentee: mentee,
+      name,
+      userType,
       date_of_birth: date,
     };
 
     try {
       const { data: user } = await axios.post(
-        "http://localhost:8000/api/users/joinus/",
+        "http://localhost:8000/v1/auth/register",
         body,
         config
       );
 
       alert("signup successful");
 
-      router.push("/signupInformation");
+      router.push("/auth/signupInformation");
     } catch (err) {
       console.log("ERROR IN AUTH", err);
       const errorCode = err.response.status;
@@ -105,7 +96,7 @@ export const AuthenticationProvider = ({ children }) => {
 
   return (
     <AuthenticationContext.Provider
-      value={{ user, signup, accessToken, login, error, userEmail }}
+      value={{ user, signup, login, error, userEmail }}
     >
       {children}
     </AuthenticationContext.Provider>

@@ -5,9 +5,9 @@ const SelectInput = () => {
     <div>
       <select name="" id="" style={{ border: "none" }}>
         <option value="">Computer Science</option>
-        <option value="">two</option>
-        <option value="">Three</option>
-        <option value="">one</option>
+        <option value="">Mathematics</option>
+        <option value="">Information Technology</option>
+        <option value="">Architecture</option>
       </select>
     </div>
   );

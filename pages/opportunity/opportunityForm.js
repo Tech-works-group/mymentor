@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Request.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import classNames from "classnames";
-import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import { interpolateAs } from "next/dist/shared/lib/router/router";
 
 const opportunityForm = () => {

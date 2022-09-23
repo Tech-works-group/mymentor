@@ -1,0 +1,21 @@
+.opportunities_column,
+.requests_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunities_column:nth-child(2),
+.requests_column:nth-child(2) {
+    align-self: flex-start;
+}
+
+.opportunities_column:nth-child(2) button,
+.requests_column:nth-child(2) {
+    width: 200px;
+}
+
+.requests_column:nth-child(2) button {
+    margin-top: 50px;
+}

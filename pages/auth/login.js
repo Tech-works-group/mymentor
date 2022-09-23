@@ -18,10 +18,11 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthenticationContext);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     await login({ email, password });
-    
+  };
   return (
     <div className="container">
       <h1 className="sub_title">Login</h1>

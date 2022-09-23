@@ -1,7 +1,6 @@
 .chat_box {
     height: fit-content;
     background-color: #f8f8f8;
-    width: 30%;
     padding: 0 25px;
     margin: 20px;
     border-radius: 15px;
@@ -67,8 +66,12 @@
     display: flex;
     flex-direction: row;
     width: 40%;
-    justify-content: space-between;
+    justify-content: left;
     margin: 20px;
+}
+
+.tabs a {
+    width: 50%;
 }
 
 .personal_info_tab {

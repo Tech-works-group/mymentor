@@ -67,7 +67,7 @@ const index = () => {
                 <div className={styles.icon_box}>
                   <FontAwesomeIcon icon={faClock} className="icon" />
                 </div>
-                <h1>Duration : Open Duration </h1>
+                <h1>Duration : Open</h1>
               </div>
             </div>
           </div>

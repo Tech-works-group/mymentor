@@ -2,38 +2,32 @@ import React, { useState, useContext } from "react";
 import AuthenticationContext from "../../context/AuthenticationContext";
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [lastName, setLastName] = useState("");
   const [date, setDate] = useState(new Date());
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [mentor, setMentor] = useState(false);
-  const [mentee, setMentee] = useState(false);
+  const [userType, setUserType] = useState("");
   const { signup } = useContext(AuthenticationContext);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     await signup({
-      firstName,
+      name,
       email,
-      lastName,
       date,
       password,
       passwordConfirmation,
-      mentor,
-      mentee,
+      userType,
       username,
     });
   };
 
   return (
     <div className="container">
-      <form
-        className="form_box"
-        onSubmit={submitHandler}
-        onSubmit={submitHandler}
-      >
+      <form className="form_box" onSubmit={submitHandler}>
         <div className="page_title left">
           <h1>Create a new account</h1>
           <p>Basic account information</p>
@@ -42,9 +36,9 @@ const Signup = () => {
           <div className="Personal_info">
             <input
               type="text"
-              placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
-              value={firstName}
+              placeholder="Full name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
             />
             <input
               type="email"
@@ -60,12 +54,6 @@ const Signup = () => {
             />
           </div>
           <div className="Personal_info">
-            <input
-              type="text"
-              placeholder="Last Name"
-              onChange={(e) => setLastName(e.target.value)}
-              value={lastName}
-            />
             <input
               type="date"
               placeholder="Date of birth"
@@ -87,32 +75,20 @@ const Signup = () => {
               value={passwordConfirmation}
             />
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                name="Mentor"
-                label="Mentor"
-                onChange={(e) => setMentor((oldValue) => !oldValue)}
-                value={mentor}
-                id="mentor"
-              ></input>
-              <label htmlFor="mentor">Mentor</label>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                name="Mentee"
-                label="Mentee"
-                onChange={(e) => setMentee((oldValue) => !oldValue)}
-                value={mentee}
-                id="mentee"
-              ></input>
-              <label htmlFor="mentee">Mentee</label>
+              <label>You are a </label>
+              <select
+                onChange={(e) => {
+                  setUserType(e.target.value);
+                }}
+              >
+                <option value="mentor">Mentor</option>
+                <option value="mentee">Mentee</option>
+              </select>
             </div>
           </div>
         </div>
 
         <button
-          type="submit"
           type="submit"
           className="vertical_margin button secondary_button"
         >

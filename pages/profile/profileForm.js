@@ -18,7 +18,6 @@ import MemberCard from "../../components/MemberCard";
 
 function profileForm() {
   const [selected, setIsSelected] = useState("personalInfo");
-  console.log(selected);
   return (
     <div className="container columns_container">
       <div className="small">

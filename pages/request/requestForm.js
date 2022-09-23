@@ -6,13 +6,55 @@ import Image from "next/image";
 import classNames from "classnames";
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import { interpolateAs } from "next/dist/shared/lib/router/router";
+import { createMentoringRequest } from "../api/mentoringRequests";
+import { useState } from "react";
 
 const requestForm = () => {
   const name = "Khadiga Saif";
-  const title = "Front End development";
   const paid = 20;
   const unit = "sdg/h";
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [isPaid, setIsPaid] = useState(false);
+  const [amount, setAmount] = useState({});
+  const [location, setLocation] = useState("");
+  const [address, setAddress] = useState({});
+  const [duration, setDuration] = useState("");
+  const [experience, setExperience] = useState([]);
+  const [background, setBackground] = useState([]);
+  const [tasks, setTasks] = useState([]);
+  const [requirements, setRequirements] = useState([]);
+  const [startingFrom, setStartingFrom] = useState("");
+  const [endingAt, setEndingAt] = useState("");
+  const [designation, setDesignation] = useState("");
 
+  const handleChange = (e) => {
+    let updatedValue = {};
+    updatedValue = { price: e.target.value, currency: e.target.value };
+    setAmount((amount) => ({
+      ...amount,
+      ...updatedValue,
+    }));
+  };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    await signup({
+      title,
+      description,
+      isPaid,
+      amount,
+      location,
+      address,
+      duration,
+      experience,
+      background,
+      tasks,
+      requirements,
+      startingFrom,
+      endingAt,
+      designation,
+    });
+  };
   return (
     <div className="container columns_container">
       <div className="small">
@@ -24,7 +66,11 @@ const requestForm = () => {
           <FontAwesomeIcon icon={faPlusSquare} className="icon" />
         </div>
       </div>
-      <div className="wide" style={{ padding: "0 25px 25px 25px" }}>
+      <form
+        className="wide"
+        style={{ padding: "0 25px 25px 25px" }}
+        onSubmit={submitHandler}
+      >
         <div className="tag">
           <h1>New Mentoring Request</h1>
         </div>
@@ -36,6 +82,8 @@ const requestForm = () => {
             className={styles.form_input}
             type="text"
             placeholder="example"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
           ></input>
         </div>
         <h3 className={styles.question}>Request Description</h3>
@@ -44,32 +92,47 @@ const requestForm = () => {
             className={styles.form_input}
             type="text"
             placeholder="example"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           ></input>
         </div>
         <div className="flex">
           <div className={styles.form_row}>
             <div className={styles.form_item}>
               <h3 className={styles.question}>Location</h3>
-              <select className={styles.form_input}>
-                <option>Remote</option>
-                <option>On site</option>
+              <select
+                className={styles.form_input}
+                onChange={(e) => {
+                  setLocation(e.target.value);
+                }}
+              >
+                <option value="Remote">Remote</option>
+                <option value="on_site">On site</option>
               </select>
             </div>
             <div className={styles.form_item}>
               <h3 className={styles.question}>Duration</h3>
-              <select className={styles.form_input}>
-                <option>3 Months</option>
-                <option>6 Months</option>
+              <select
+                className={styles.form_input}
+                onChange={(e) => {
+                  setDuration(e.target.value);
+                }}
+              >
+                <option value="3month">3 Months</option>
+                <option value="6months">6 Months</option>
               </select>
             </div>
           </div>
           <div className={styles.form_row}>
             <div className={styles.form_item}>
               <h3 className={styles.question}>Experience</h3>
-              <select className={styles.form_input}>
-                <option>None</option>
-                <option>1 year</option>
-              </select>
+              <input
+                className={styles.form_input}
+                type="text"
+                placeholder="example"
+                value={experience}
+                onChange={(e) => setExperience(e.target.value)}
+              ></input>
             </div>
           </div>
           <div className={styles.form_row}>
@@ -78,7 +141,9 @@ const requestForm = () => {
               <input
                 className={styles.form_input}
                 type="radio"
-                value="paid"
+                value={paid}
+                id="paid"
+                onChange={(e) => setIsPaid((oldValue) => !oldValue)}
               ></input>
             </div>
             <div>
@@ -86,14 +151,20 @@ const requestForm = () => {
               <input
                 className={styles.form_input}
                 type="text"
+                onChange={(e) => handleChange(e)}
+                value={amount.price}
                 placeholder="example"
               ></input>
             </div>
             <div>
               <h3 className={styles.question}>Currency</h3>
-              <select className={styles.form_input}>
-                <option>SDG</option>
-                <option>USD</option>
+              <select
+                className={styles.form_input}
+                onChange={(e) => handleChange(e)}
+                value={amount.currency}
+              >
+                <option value="sdg">SDG</option>
+                <option value="usd">USD</option>
               </select>
             </div>
           </div>
@@ -105,6 +176,10 @@ const requestForm = () => {
               className={styles.form_input}
               type="text"
               placeholder="example"
+              value={tasks}
+              onChange={(e) => {
+                setTasks(e.target.value);
+              }}
             ></input>
             <FontAwesomeIcon icon={faPlusSquare} className="icon" />
           </div>
@@ -116,6 +191,8 @@ const requestForm = () => {
               className={styles.form_input}
               type="text"
               placeholder="example"
+              value={requirements}
+              onChange={(e) => setRequirements(e.target.value)}
             ></input>
             <FontAwesomeIcon icon={faPlusSquare} className="icon" />
           </div>
@@ -125,16 +202,22 @@ const requestForm = () => {
               className={styles.form_input}
               type="text"
               placeholder="example"
+              value={background}
+              onChange={(e) => setBackground(e.target.value)}
             ></input>
             <FontAwesomeIcon icon={faPlusSquare} className="icon" />
           </div>
         </div>
         <div className="right">
-          <button className="button main_button" style={{ marginTop: "25px" }}>
+          <button
+            className="button main_button"
+            style={{ marginTop: "25px" }}
+            type="submit"
+          >
             Publish
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const OpportunityCard = ({ source }) => {
         <div className="pill"> pill two</div>
       </div>
       <p className="text">
-        looking for someone who’s intrested in project managment related tasks
+        looking for someone who’s interested in project management related tasks
         and who’s eagre to gain knowledge and have fun during the experience
       </p>
     </div>

@@ -2,10 +2,16 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-const Request = ({ request }) => {
-  console.log(request);
+const Request = ({ request }, source) => {
+  console.log(source);
   return (
-    <div className={styles.request_card}>
+    <div
+      className={
+        (source = "requests_page"
+          ? styles.large_request_page
+          : styles.request_card)
+      }
+    >
       <div className={styles.request_section}>
         <div>
           <h1 className="title">Front end development</h1>

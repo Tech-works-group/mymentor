@@ -5,7 +5,7 @@ import styles from "../../styles/Profile.module.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
+import Calender from "../../components/Calender";
 import {
   faPlusSquare,
   faMagnifyingGlass,
@@ -179,26 +179,37 @@ function index() {
           </div>
         )}
       </div>
-      <div className={styles.chat_box}>
-        <div className={styles.search}>
-          <div>
-            <TextInput
-              type="text"
-              placeholder="Search in messages"
-              style={{ borderBottom: "none", width: "80%" }}
-            ></TextInput>
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              style={{ fontSize: 15, color: "#ffffff" }}
-            />
+      <div
+        style={{
+          width: "40%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className={styles.chat_box}>
+          <div className={styles.search}>
+            <div>
+              <TextInput
+                type="text"
+                placeholder="Search in messages"
+                style={{ borderBottom: "none", width: "80%" }}
+              ></TextInput>
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                style={{ fontSize: 15, color: "#ffffff" }}
+              />
+            </div>
           </div>
+          <div>
+            <Message />
+            <Message />
+            <Message />
+          </div>
+          <button className="button main_button">New Message</button>
         </div>
-        <div>
-          <Message />
-          <Message />
-          <Message />
-        </div>
-        <button className="button main_button">New Message</button>
+        <Calender source="profile" />
       </div>
     </div>
   );

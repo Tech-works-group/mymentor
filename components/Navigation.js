@@ -1,15 +1,15 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import AuthenticationContext from "../context/AuthenticationContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCrown } from "@fortawesome/free-solid-svg-icons";
 const Navigation = (props) => {
   const data = useContext(AuthenticationContext);
   const [clientWindowHeight, setClientWindowHeight] = useState("");
-  const [show, setShow]=useState(false)
+  const [show, setShow] = useState(false);
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
@@ -35,7 +35,6 @@ const Navigation = (props) => {
       setBoxShadow(boxShadowVar);
     }
   }, [clientWindowHeight]);
-console.log(show)
   return (
     <>
       <div
@@ -47,24 +46,28 @@ console.log(show)
         }}
       >
         <div>
-          <Image
-            style={{ width: "220px" }}
-            src="/logo.png"
-            alt="my mentor Logo"
-            className="logo"
-            width={180}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              style={{ width: "220px" }}
+              src="/logo.png"
+              alt="my mentor Logo"
+              className="logo"
+              width={180}
+              height={40}
+            />
+          </Link>
         </div>
         {user ? (
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <Link href="/">
+            <Link href="/find_mentor">
               <button className="nav_item">Find a mentor </button>
             </Link>
-            <Link href="/about">
+            <Link href="/info/become_mentor">
               <button className="nav_item">Become a mentor</button>
             </Link>
-
+            <Link href="/info/vip_mentors">
+              <button className="nav_item">VIP mentors</button>
+            </Link>
             <div className="nav_item">
               <a href={"/profile"}>
                 welcome{data.user.username ? data.user.username : ""}
@@ -77,12 +80,22 @@ console.log(show)
           </div>
         ) : (
           <>
-            <div>
-              <Link href="/">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Link href="/info/find_mentor">
                 <button className="nav_item">Find a mentor </button>
               </Link>
-              <Link href="/about">
+              <Link href="/info/become_mentor">
                 <button className="nav_item">Become a mentor</button>
+              </Link>
+              <Link href="/info/vip_mentors">
+                <div style={{ display: "flex" }}>
+                  <button className="nav_item">VIP mentors</button>
+                  <FontAwesomeIcon
+                    icon={faCrown}
+                    className="icon_yellow"
+                    style={{ marginRight: "10px" }}
+                  />
+                </div>
               </Link>
               <Link href="/auth/login">
                 <button className="secondary_button button">Login</button>
