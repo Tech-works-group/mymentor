@@ -54,7 +54,7 @@ export default function Home({ done }) {
       // make sure to catch any error
       .catch(console.error);
   }, []);
-  console.log(opportunities);
+
   return (
     <div className={styles.container}>
       <Head>
