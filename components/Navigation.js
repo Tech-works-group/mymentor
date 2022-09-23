@@ -6,6 +6,8 @@ import AuthenticationContext from "../context/AuthenticationContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 import { faBars, faCrown } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { useRouter } from "next/router";
 const Navigation = (props) => {
   const data = useContext(AuthenticationContext);
   const [clientWindowHeight, setClientWindowHeight] = useState("");
@@ -23,10 +25,10 @@ const Navigation = (props) => {
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY);
   };
-
+  const router = useRouter()
   useEffect(() => {
     let backgroundTransparacyVar = clientWindowHeight / 600;
-
+    
     if (backgroundTransparacyVar < 1) {
       let paddingVar = 40 - backgroundTransparacyVar * 20;
       let boxShadowVar = backgroundTransparacyVar * 0.1;
@@ -74,9 +76,12 @@ const Navigation = (props) => {
               </a>
             </div>
 
-            <Link href="/auth/signup">
-              <button className="main_button button">Logout</button>
-            </Link>
+            <button onClick={() => {
+              axios.get('http://localhost:8000/v1/auth/logout', {
+                withCredentials:true
+              } )
+              router.reload()
+              }} className="main_button button">Logout</button>
           </div>
         ) : (
           <>
